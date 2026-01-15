@@ -62,7 +62,7 @@ def get_dataset(args, vidx, smooth):
         if args.dataset.startswith("mnist"):
             from datasets.mnist_video import MnistVideo
 
-            args.datapath = "./data/MNIST5/mnist100.pkl"
+            args.datapath = "./data/Moving5/mnist100.pkl"
             args.input_channels = 28 * 28 * 3
             args.imsize = 28
             data = MnistVideo(args, set_name=args.set)
