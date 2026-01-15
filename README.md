@@ -140,10 +140,12 @@ We use previously provided features for each dataset:
 
 **All credit for data features is with the authors.**
 
+Create a ```data/``` folder contining the dataset files.
+
 The datasets should contain the all the same structure except for "Moving5":
 
 ```
-data                    -- the folder with all the data files
+data/                    -- the folder with all the data files
     50Salads/           -- folder contains the "50 Salads" dataset
         features/       -- text files contains features vectors, 1 file per video, 1 row per frame
         groundTruth/    -- text files containing action labels, 1 file per video, 1 row per frame
