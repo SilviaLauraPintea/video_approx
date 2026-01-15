@@ -1,0 +1,12 @@
+# Core Libraries
+
+# Plugin and tool dependencies
+numpy                           # For data processing and model support
+matplotlib                      # For plotting
+scikit-learn                    # For algos
+opencv-python                   # For some data reading
+seaborn                         # For plotting
+jax==0.5.2
+neural-tangents
+jax[cuda]                       # This is needed as well
+optax
