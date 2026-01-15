@@ -1,18 +1,17 @@
 # Deep kernel video approximation for unsupervised action segmentation
 Python implementation of the experiments from **"Deep kernel video approximation for unsupervised action segmentation"**, __Pintea, Silvia L and and Dijkstra, Jouke__.
-
 [<a href="https://arxiv.org/abs/?">Arxiv</a>]
 
 
 ### Overview
-This work propose segmenting videos by learning in deep kernel space, to approximate the underlying frame distribution, as closely as possible.
+We segment videos by learning in deep kernel space, to approximate the underlying frame distribution, as closely as possible.
 To define this closeness metric between the original video distribution and its approximation, we rely on maximum mean discrepancy (MMD)
 which is a geometry-preserving metric in distribution space, and thus gives more reliable estimates.
 Moreover, unlike the commonly used optimal transport metric, MMD is both easier to optimize, and faster.
 We choose to use neural tangent kernels (NTKs) to define the kernel space where MMD operates, because of their improved descriptive power as opposed to fixed kernels.
 And, also, because NTKs sidestep the trivial solution, when jointly learning the inputs (video approximation) and the kernel function.
 
-<img src="mmd.png" style="width:450px;"/>
+<img src="mmd.png" style="width:850px;"/>
 
 Finally, we show competitive results when compared to state-of-the-art per-video methods, on six standard benchmarks.
 Additionally, our method has higher F1 scores than prior agglomerative work, when the number of segments is unknown.
@@ -31,7 +30,7 @@ To run the docker container just type:
 > bash run.sh
 ```
 
-**All credit for third party software/code is with the authors.***
+**All credit for third party software/code is with the authors.**
 
 ### Code organization
 
@@ -75,7 +74,9 @@ baseline/      -- directory with baseline implementations
 ```
 
 [1] __Sarfraz, Saquib, et al.__ **"Temporally-weighted hierarchical clustering for unsupervised action segmentation"**, CVPR, 2021.
+
 [2] __Du, Zexing, et al.__ **"Fast and unsupervised action boundary detection for action segmentation", CVPR, 2022.
+
 [3] __Xing, Zheng, and Weibing Zhao__. **"Unsupervised action segmentation via fast learning of semantically consistent actoms"**, AAAI, 2024.
 
 To run the TW-FINCH baseline model on the "50 Salads" dataset, for example, just run:
@@ -102,6 +103,7 @@ mmd_lib/               -- directory containing our video approximation implement
 ```
 
 [4] __Nguyen, Timothy, et. al.__ **"Dataset meta-learning from kernel ridge-regression"**, ICLR, 2021.
+
 (https://colab.research.google.com/github/google-research/google-research/blob/master/kip/KIP.ipynb)
 
 
@@ -133,9 +135,9 @@ We use previously provided features for each dataset:
 [5] __Kukleva, Anna, et al.__ **"Unsupervised learning of action classes with continuous temporal embedding"**, CVPR, 2019.
 [6] __Kumar, Sateesh, et al.__ **"Unsupervised action segmentation by joint representation learning and online clustering"**, CVPR, 2022.
 
-All credit for data features is with the authors.
+**All credit for data features is with the authors.**
 
-The datasets should contain the all the same structure except for "Mnist5":
+The datasets should contain the all the same structure except for "Moving5":
 
 ```
 data                    -- the folder with all the data files
@@ -154,7 +156,7 @@ data                    -- the folder with all the data files
         ...
     YouTubeInstructions -- containing the "YouTube Instructions" dataset
         ...
-    MNIST5/             -- containing the "Mnist5" raw data
+    Moving5/             -- containing the "Moving5" raw data
         mnist100.pkl   -- containing the pickled data: (data, labels) tuple pickled together.
 ```
 
@@ -162,11 +164,7 @@ data                    -- the folder with all the data files
 
 If you use this code, please cite the publication:
 
+
 ```
-@inproceedings{pintea2026deep,
-  title={Deep kernel video approximation for unsupervised action segmentation},
-  author={Pintea, Silvia L and Dijkstra, Jouke},
-  booktitle={CoRR},
-  year={2026},
-}
+...
 ```
