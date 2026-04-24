@@ -1,6 +1,6 @@
 # Deep kernel video approximation for unsupervised action segmentation
 Python implementation of the experiments from **"Deep kernel video approximation for unsupervised action segmentation"**, __Pintea, Silvia L and and Dijkstra, Jouke__, ICPR 2026.
-[<a href="arxiv.org/abs/2604.21572">Arxiv</a>]
+[<a href="https://arxiv.org/abs/2604.21572">Arxiv</a>]
 
 
 ### Overview
